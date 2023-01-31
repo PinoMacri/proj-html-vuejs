@@ -5,6 +5,8 @@ export default {
         return {
             name: "Button"
         }
+    }, props: {
+        nameButton: String,
     }
 }
 
@@ -15,13 +17,16 @@ export default {
 
 <template>
 
-
+    <button class="px-4">{{ nameButton }}</button>
 
 </template>
 
 
 
 
-<style>
-
+<style scoped>
+button {
+    border-radius: 30px;
+    border: none;
+}
 </style>

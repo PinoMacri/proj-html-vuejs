@@ -1,6 +1,6 @@
 //* --- FLEXBOX --- *//
 /* CENTERING */
-@mixin center ($axis) {
+@mixin flex ($axis) {
     display: flex;
 
     @if $axis =="main" {
