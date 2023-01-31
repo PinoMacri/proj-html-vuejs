@@ -1,0 +1,18 @@
+//* --- FLEXBOX --- *//
+/* CENTERING */
+@mixin center ($axis) {
+    display: flex;
+
+    @if $axis =="main" {
+        justify-content: center;
+    }
+
+    @else if $axis =="cross" {
+        align-items: center
+    }
+
+    @else {
+        align-items: center;
+        justify-content: center;
+    }
+}
