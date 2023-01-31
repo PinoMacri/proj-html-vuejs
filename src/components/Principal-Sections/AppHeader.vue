@@ -1,15 +1,19 @@
 <script>
 //*Components Importation
+import Logo from "../Micro-Components/Logo.vue"
 import AppJumbotron from "../Macro-Components/AppJumbotron.vue";
 import Button from "../Micro-Components/Button.vue";
 import Navbar from "../Micro-Components/Navbar.vue"
+//*External File Importation
+import { store } from "../../Store-Management/store"
 
 /*------------*/
 export default {
-    components: { AppJumbotron, Button, Navbar },
+    components: { AppJumbotron, Button, Navbar, Logo },
     data() {
         return {
-            name: "AppHeader"
+            name: "AppHeader",
+            store: store,
         }
     }
 }
@@ -22,6 +26,7 @@ export default {
 
 <template>
 
+    <Logo></Logo>
     <Navbar></Navbar>
     <Button></Button>
     <app-jumbotron></app-jumbotron>
