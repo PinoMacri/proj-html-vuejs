@@ -1,20 +1,30 @@
 <script >
+
+//*Components Importation
 import AppHeader from './components/Principal-Sections/AppHeader.vue';
+/*------------*/
 export default {
   components: { AppHeader, }
 }
+
 </script>
 
+
+
+
+
 <template>
-  <!-- -->
+
+  <!-- HEADER -->
   <app-header></app-header>
+
 </template>
 
-<style lang="scss" >
-//* --- SASS --- *//
-@use "./assets/Scss/mixin" as*;
-@use "./assets/Scss/variables" as*;
 
+
+
+
+<style lang="scss" >
 //* --- GENERAL --- *//
 body {
   font-family: 'Roboto', sans-serif;
