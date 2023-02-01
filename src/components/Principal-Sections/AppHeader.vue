@@ -83,7 +83,7 @@ export default {
         </div>
         <!-- HEADER CARD -->
         <div class="container-fluid headerCard  position-relative ">
-            <Card divCard="cardJumbotron position-absolute" image="/src/assets/Img/middle.png">
+            <Card divCard="cardH position-absolute" image="/src/assets/Img/middle.png">
             </Card>
             <div class="playCircle position-absolute d-flex justify-content-center align-items-center">
                 <i class="fa-solid fa-play"></i>
@@ -177,7 +177,7 @@ div.nav-bar {
     height: 511px;
     z-index: 1;
 
-    .cardJumbotron {
+    .cardH {
         left: 50%;
         top: 0px;
         transform: translate(-50%);

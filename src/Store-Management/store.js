@@ -19,6 +19,12 @@ export const store = reactive({
             paragraph: "We constantly ask questions. It help us shape your story and deliver the results you crave. Yep, we'Il drill deep to deliver above and beyond your expectations.",
             color: "#FFDFED"
         }
+    ],
+    facts: [
+        { work: "Projects done", number: "700+" },
+        { work: "Happy Clients", number: "250+" },
+        { work: "Team Members", number: "25+" },
+        { work: "Years on the market", number: "12+" },
     ]
 
 })

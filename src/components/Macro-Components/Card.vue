@@ -21,17 +21,19 @@ export default {
 
 <template>
 
+
     <div :class="divCard">
         <img :class="imgCard" :src="image" alt="">
         <h3 v-if="title" :class="classTitle">{{ title }}</h3>
         <p v-if="paragraph" :class="classP"> {{ paragraph }}</p>
     </div>
 
+
 </template>
 
 
 
 
-<style>
+<style lang="scss">
 
 </style>
