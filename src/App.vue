@@ -27,7 +27,7 @@ export default {
 <style lang="scss" >
 //* --- GENERAL --- *//
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Itim', cursive;
 }
 
 ul {
@@ -38,10 +38,7 @@ a {
   text-decoration: none;
 }
 
-/*Check Operation
 p {
-  @include center($axis: ""); mixin
-  background-color: $brand_orange; variabili
+  font-size: 20px;
 }
-*/
 </style>

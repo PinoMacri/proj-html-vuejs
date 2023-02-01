@@ -8,12 +8,9 @@ export default {
         }
     }, props: {
         links: Array,
-        display: String,
-        color_A: String,
-        padding_A: String,
-        padding_NAV: String,
-        margin_NAV: String,
-        margin_A: String,
+        personalizationNav: String,
+        personalizationUL: String,
+        personalizationA: String,
     }
 }
 
@@ -24,10 +21,10 @@ export default {
 
 <template>
 
-    <nav :style="` padding: ${padding_NAV}; margin: ${margin_NAV}; display:${display} `">
-        <ul :style="` display: ${display}; `">
+    <nav :class="personalizationNav">
+        <ul :class="personalizationUL">
             <li v-for="link in links" :key="link">
-                <a :style="`color:${color_A}; padding: ${padding_A}; margin: ${margin_A} `" href="#">{{ link }}</a>
+                <a :class="personalizationA" href="#">{{ link }}</a>
             </li>
         </ul>
     </nav>

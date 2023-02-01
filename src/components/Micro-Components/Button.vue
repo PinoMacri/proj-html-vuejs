@@ -7,6 +7,7 @@ export default {
         }
     }, props: {
         nameButton: String,
+        personalization: String,
     }
 }
 
@@ -17,7 +18,7 @@ export default {
 
 <template>
 
-    <button class="px-4">{{ nameButton }}</button>
+    <button :class="personalization">{{ nameButton }}</button>
 
 </template>
 

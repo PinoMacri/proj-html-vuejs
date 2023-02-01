@@ -16,7 +16,9 @@ export default {
 <template>
 
     <div class="brand-logo">
+
         <img src="../../assets/Img/logo.png" alt="">
+
     </div>
 
 </template>
