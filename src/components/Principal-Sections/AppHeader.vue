@@ -83,7 +83,8 @@ export default {
         </div>
         <!-- HEADER CARD -->
         <div class="container-fluid headerCard  position-relative ">
-            <Card divJumbotron="cardJumbotron position-absolute" image="/src/assets/Img/middle.png"></Card>
+            <Card divCard="cardJumbotron position-absolute" image="/src/assets/Img/middle.png">
+            </Card>
             <div class="playCircle position-absolute d-flex justify-content-center align-items-center">
                 <i class="fa-solid fa-play"></i>
             </div>

@@ -5,9 +5,13 @@ export default {
             name: "Card"
         }
     }, props: {
-        divJumbotron: String,
-        imgJumbotron: String,
+        divCard: String,
+        imgCard: String,
         image: String,
+        title: String,
+        paragraph: String,
+        pino: String,
+        classTitle: String,
     }
 }
 </script>
@@ -17,8 +21,10 @@ export default {
 
 <template>
 
-    <div :class="divJumbotron">
-        <img :class="imgJumbotron" :src="image" alt="">
+    <div :class="divCard">
+        <img :class="imgCard" :src="image" alt="">
+        <h3 v-if="title" :class="classTitle">{{ title }}</h3>
+        <p v-if="paragraph" :class="pino"> {{ paragraph }}</p>
     </div>
 
 </template>
