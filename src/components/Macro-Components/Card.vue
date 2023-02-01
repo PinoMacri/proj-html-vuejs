@@ -10,7 +10,7 @@ export default {
         image: String,
         title: String,
         paragraph: String,
-        pino: String,
+        classP: String,
         classTitle: String,
     }
 }
@@ -24,7 +24,7 @@ export default {
     <div :class="divCard">
         <img :class="imgCard" :src="image" alt="">
         <h3 v-if="title" :class="classTitle">{{ title }}</h3>
-        <p v-if="paragraph" :class="pino"> {{ paragraph }}</p>
+        <p v-if="paragraph" :class="classP"> {{ paragraph }}</p>
     </div>
 
 </template>
