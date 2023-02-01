@@ -28,6 +28,66 @@ export const store = reactive({
     ],
     productionImages: [
         "work1.png", "work2.png", "work3.png", "work4.png"
+    ],
+    productions: [
+        {
+            image: "process1.png",
+            number: "1",
+            title: "Pre-Production",
+            text: "We'Il take your idea and create a technical script which consist of action notes and animation descriptions"
+        },
+        {
+            image: "process2.png",
+            number: "2",
+            title: "Scripting",
+            text: "We'Il take your idea and create a technical script which consist of action notes and animation descriptions"
+        },
+        {
+            image: "smart2.png",
+            number: "3",
+            title: "Preparation",
+            text: "We'Il take your idea and create a technical script which consist of action notes and animation descriptions"
+        },
+        {
+            image: "smart3.png",
+            number: "4",
+            title: "Working",
+            text: "We'Il take your idea and create a technical script which consist of action notes and animation descriptions"
+        },
+    ], members: [
+        {
+            image: "team1.png",
+            name: "Robert Coleman",
+            role: "Owner & Creative Director",
+
+        },
+        {
+            image: "team2.png",
+            name: "Don Woods",
+            role: "Administrator",
+
+        },
+        {
+            image: "team4.png",
+            name: "Tomas Nash",
+            role: "2d Animator & Compositor",
+
+        },
+        {
+            image: "team2.png",
+            name: "Nyck De Vries",
+            role: "Content Creator",
+
+        },
+    ], socials: [
+        "<i class='fa-brands fa-facebook'></i>",
+        "<i class='fa-brands fa-square-twitter'></i>",
+        "<i class='fa-brands fa-instagram'></i> ",
+    ], circles: [
+        '<i class="fa-solid fa-circle"></i>',
+        '<i class="fa-solid fa-circle"></i>',
+        '<i class="fa-solid fa-circle"></i>',
+        '<i class="fa-solid fa-circle"></i>',
     ]
 
 })

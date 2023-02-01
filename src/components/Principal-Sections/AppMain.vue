@@ -11,8 +11,34 @@ export default {
         return {
             name: "Main",
             store: store,
+            currentIndex: 0,
+            index: 0,
+
         }
-    },
+    }, methods: {
+        buttonClickedPrev() {
+            this.currentIndex--
+            if (this.currentIndex < 0) {
+                this.currentIndex = store.productions.length - 1
+            }
+        }, buttonClickedNext() {
+            this.currentIndex++
+            if (this.currentIndex === store.productions.length) {
+                this.currentIndex = 0
+            }
+        }, buttonClickPrevOpacity() {
+            this.index--
+            if (this.index < 0) {
+                this.index = store.members.length - 1
+            }
+        }, buttonClickNextOpacity() {
+            this.index++
+            if (this.index === store.members.length) {
+                this.index = 0
+            }
+        },
+    }
+
 }
 </script>
 
@@ -107,14 +133,92 @@ export default {
                 </div>
             </div>
         </section>
+        <!-- Section Image & Card -->
+        <div class="container-fluid image-card secondMargin">
+            <div class="row">
+                <div class="col-3">
+                    <div class="circle">
+                        <img src="../../assets/Img/process-thumb.png" alt="">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="principalText w-100  ">
+                        <div class="w-50 ">
+                            <p class="pre-title">
+                                Our Process
+                            </p>
+                            <h2 class="title ">
+                                Our Process for Your Animation Production
+                            </h2>
+                            <p class="caption">
+                                We have an effective process for working on animation
+                            </p>
+                        </div>
+                    </div>
+                    <div class="principalCards  d-flex justify-content-center w-100 p-3 ">
+                        <Card :divCard="i === currentIndex ? 'd-block divCard text-center p-4' : 'd-none'" classP="p-2"
+                            v-for="(production, i) in store.productions" :key="i" :title="production.title"
+                            :paragraph="production.text" :image="`/src/assets/Img/${production.image}`"
+                            imgCard="imgCard p-4" :number="production.number">
+                        </Card>
+                        <div class="smart-4">
+                            <img class="img-fluid" src="../../assets/Img/smart4.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="button-arrows text-center ">
+                <Button @button-clicked="buttonClickedPrev" nameButton="<i class='fa-solid fa-circle-left'></i>"
+                    personalization="bg-white styleArrows"></Button>
+                <Button @button-clicked="buttonClickedNext" nameButton="<i class='fa-solid fa-circle-right'></i>"
+                    personalization="bg-white styleArrows"></Button>
+            </div>
+        </div>
+        <!-- Section Members -->
+        <section class="section-member">
+            <div class="d-flex shapePink">
+                <img src="../../assets/Img/shape.png" alt="">
+                <img src="../../assets/Img/shape2.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-12 d-flex flex-column align-items-center">
+                        <p class="pre-title title-member">Anidio Magic Team Member</p>
+                        <h2 class="title title-animate">
+                            Let Us Animate Your Project
+                        </h2>
+                        <p class="caption caption-member">We create new worlds! Let's collaborate and create engaging,
+                            effective, award-winning
+                            animations</p>
+                    </div>
+                    <Card v-for="(member, i) in store.members" :key="i" :paragraph="member.role" :options=store.socials
+                        :divCard="i === index ? 'col-2 member opacity' : 'noOpacity col-2 member'"
+                        :image="`/src/assets/Img/${member.image}`" :title="member.name" classTitle="pt-3"
+                        ulClass="d-flex justify-content-center" liClass="m-2 h2 text-primary">
+                    </Card>
+                </div>
+            </div>
+            <div class="mt-5 text-center d-flex justify-content-center align-items-center">
+                <Button @button-clicked="buttonClickPrevOpacity" nameButton="<i class='fa-solid fa-circle-left'></i>"
+                    personalization="bg-white styleArrows me-5"></Button>
+                <ul class="d-flex">
+                    <li v-for="(circle, i) in store.circles" :key="i" v-html="circle"
+                        :class="i === index ? 'p-2 orange' : 'p-2 black'"></li>
+                </ul>
+                <Button @button-clicked="buttonClickNextOpacity" nameButton="<i class='fa-solid fa-circle-right'></i>"
+                    personalization="bg-white styleArrows me-5"></Button>
+            </div>
+
+        </section>
     </main>
 </template>
 
 
+.
 
 
-
-<style lang="scss" scoped>
+<style lang="scss"  >
 //! --- SASS --- *//
 @use "../../assets/Scss/mixin" as*;
 @use "../../assets/Scss/variables" as*;
@@ -142,6 +246,26 @@ h2 {
 
 .bck-pink {
     background-color: $brand_pink;
+}
+
+.black {
+    color: black;
+}
+
+.orange {
+    color: orangered;
+}
+
+/* Styles Buttons */
+.styleButtons {
+    padding: 10px 30px;
+
+}
+
+.styleArrows {
+    font-size: 40px;
+    margin-left: 90px;
+    margin-top: -50px;
 }
 
 //* Section Image & Cards */
@@ -202,6 +326,7 @@ h2 {
     width: 300px;
     height: 200px;
     margin-top: 350px;
+    margin-left: 100px;
 }
 
 //* Section Information */
@@ -265,6 +390,7 @@ h2 {
     width: 650px;
     border-radius: 15%;
     margin-bottom: 210px;
+
 }
 
 .caption.productions {
@@ -275,4 +401,85 @@ h2 {
     padding: 20px;
     color: $brand_purple;
 }
+
+//* Section Image & Cards */
+.secondMargin {
+    margin-top: 80px;
+}
+
+.circle {
+    height: 800px;
+    width: 800px;
+    margin-left: -300px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.button-arrows {
+    margin-left: -1px;
+}
+
+.section-member {
+    margin-top: 100px;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+.caption-member {
+    margin-bottom: 300px;
+    margin-top: -300px;
+    padding: 20px;
+}
+
+.title-animate {
+    margin-bottom: 300px;
+    margin-top: -320px;
+    padding: 20px;
+}
+
+.title-member {
+    margin-bottom: 300px;
+    margin-top: -120px;
+    padding: 20px;
+}
+
+.shapePink {
+    width: 100%;
+    position: absolute;
+    margin-top: -350px;
+
+    z-index: -1;
+
+    img {
+        width: 100%;
+    }
+}
+
+.noOpacity {
+    opacity: 0.3;
+}
+
+li.text-primary {
+    cursor: pointer;
+}
+
+.member {
+    background-color: $brand_light_yellow;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+
+
+    img {
+        margin-top: -100px;
+    }
+}
+
+//* Section Members */
 </style>

@@ -3,12 +3,13 @@
 export default {
     data() {
         return {
-            name: "Button"
+            name: "Button",
+            currentIndex: 0,
         }
     }, props: {
         nameButton: String,
         personalization: String,
-    }
+    }, emit: ["button-clicked"]
 }
 
 </script>
@@ -18,7 +19,7 @@ export default {
 
 <template>
 
-    <button :class="personalization">{{ nameButton }}</button>
+    <button @click="$emit('button-clicked')" :class="personalization" v-html="nameButton"></button>
 
 </template>
 
