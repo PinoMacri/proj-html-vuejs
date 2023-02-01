@@ -25,6 +25,9 @@ export const store = reactive({
         { work: "Happy Clients", number: "250+" },
         { work: "Team Members", number: "25+" },
         { work: "Years on the market", number: "12+" },
+    ],
+    productionImages: [
+        "work1.png", "work2.png", "work3.png", "work4.png"
     ]
 
 })

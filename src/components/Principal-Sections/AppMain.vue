@@ -1,11 +1,12 @@
 <script >
 //*Components Importation
 import Card from "../Macro-Components/Card.vue";
+import Button from "../Micro-Components/Button.vue";
 //*External File Importation
 import { store } from "../../Store-Management/store"
 //*Export Default
 export default {
-    components: { Card, },
+    components: { Card, Button },
     data() {
         return {
             name: "Main",
@@ -59,7 +60,6 @@ export default {
             </div>
         </div>
         <!-- Section Information -->
-
         <section class="section-information ">
             <div class="shape">
                 <img class="img-fluid" src="../../assets/Img/shape-top.png" alt="">
@@ -79,6 +79,32 @@ export default {
             </div>
             <div class="shape-bottom">
                 <img class="img-fluid" src="../../assets/Img/shape-bottom.png" alt="">
+            </div>
+        </section>
+        <!-- Section Cards -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <p class="pre-title">Our Works</p>
+                        <h2 class="title">Featured Productions</h2>
+                        <p class="caption productions">Here's just a small sample of some of those projects that we're
+                            quite proud
+                            of.
+                            If you're
+                            lookinh for something specific feel free to get in contact whith us.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+
+                    <Card v-for="productionImage in store.productionImages"
+                        :image="`src/assets/img/${productionImage} `" divCard="col-3 flex-wrap d-flex  divCards">
+                    </Card>
+
+                </div>
+                <div class="text-center">
+                    <Button nameButton="See Our Work" personalization="styleButton"></Button>
+                </div>
             </div>
         </section>
     </main>
@@ -231,5 +257,22 @@ h2 {
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+//* Section Cards */
+.divCards {
+    height: 200px;
+    width: 650px;
+    border-radius: 15%;
+    margin-bottom: 210px;
+}
+
+.caption.productions {
+    margin-top: 100px;
+}
+
+.styleButton {
+    padding: 20px;
+    color: $brand_purple;
 }
 </style>
