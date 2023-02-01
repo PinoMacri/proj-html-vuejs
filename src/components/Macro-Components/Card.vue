@@ -1,5 +1,4 @@
 <script>
-
 export default {
     data() {
         return {
@@ -11,7 +10,6 @@ export default {
         image: String,
     }
 }
-
 </script>
 
 
