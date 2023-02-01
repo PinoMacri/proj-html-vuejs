@@ -1,17 +1,15 @@
 <script >
 //*Components Importation
 import Card from "../Macro-Components/Card.vue";
-import Button from "../Micro-Components/Button.vue";
 //*External File Importation
 import { store } from "../../Store-Management/store"
 //*Export Default
 export default {
-    components: { Card, Button },
+    components: { Card, },
     data() {
         return {
             name: "Main",
             store: store,
-            color: "red",
         }
     },
 }
@@ -139,5 +137,10 @@ h2 {
     width: 300px;
     border-radius: 15%;
     border: 1px solid rgb(187, 187, 187);
+    color: white;
+}
+
+.red {
+    color: red;
 }
 </style>
