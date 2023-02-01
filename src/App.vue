@@ -2,9 +2,10 @@
 //*Components Importation
 import AppHeader from './components/Principal-Sections/AppHeader.vue';
 import AppMain from './components/Principal-Sections/AppMain.vue'
+import AppFooter from './components/Principal-Sections/AppFooter.vue'
 //*Export Default
 export default {
-  components: { AppHeader, AppMain }
+  components: { AppHeader, AppMain, AppFooter }
 }
 </script>
 
@@ -17,6 +18,8 @@ export default {
   <app-header></app-header>
   <!-- MAIN -->
   <app-main></app-main>
+  <!-- FOOTER -->
+  <app-footer></app-footer>
 </template>
 
 

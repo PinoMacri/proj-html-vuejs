@@ -82,7 +82,7 @@ export default {
             </div>
         </div>
         <!-- HEADER CARD -->
-        <div class="container-fluid headerCard  position-relative ">
+        <div class="container-fluid headerCard  position-relative mt-4 ">
             <Card divCard="cardH position-absolute" image="/src/assets/Img/middle.png">
             </Card>
             <div class="playCircle position-absolute d-flex justify-content-center align-items-center">

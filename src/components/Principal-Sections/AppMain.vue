@@ -268,20 +268,6 @@ export default {
 @use "../../assets/Scss/mixin" as*;
 @use "../../assets/Scss/variables" as*;
 
-.information {
-    margin-top: 100px;
-}
-
-.ml {
-    margin-left: 830px;
-    position: absolute;
-    left: 420px;
-    bottom: 94px;
-    padding: 6px 20px;
-    background-color: $brand_pink;
-
-}
-
 //! --- MAIN --- *//
 //* General-Main */
 main {
@@ -559,5 +545,18 @@ li.text-primary {
     }
 }
 
-//* Section Members */
+//* Section Form */
+.information {
+    margin-top: 100px;
+}
+
+.ml {
+    margin-left: 830px;
+    position: absolute;
+    left: 420px;
+    bottom: 94px;
+    padding: 6px 20px;
+    background-color: $brand_pink;
+
+}
 </style>

@@ -7,4 +7,12 @@ const menu = [
     "Blog",
     "Contact",
 ]
-export { menu };
+const secondMenu = [
+    "Abous Us",
+    "Portfolio",
+    "Pricing",
+    "Career",
+    "Contact"
+]
+
+export { menu, secondMenu };

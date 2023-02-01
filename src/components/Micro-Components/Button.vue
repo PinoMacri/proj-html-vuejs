@@ -4,7 +4,6 @@ export default {
     data() {
         return {
             name: "Button",
-            currentIndex: 0,
         }
     }, props: {
         nameButton: String,
