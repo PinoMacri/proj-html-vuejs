@@ -1,4 +1,4 @@
-const headerMenu = [
+const menu = [
     "Home",
     "About Us",
     "Portfolio",
@@ -7,5 +7,4 @@ const headerMenu = [
     "Blog",
     "Contact",
 ]
-const buttonNavHeader = "Get a Quote";
-export { headerMenu, buttonNavHeader };
+export { menu };

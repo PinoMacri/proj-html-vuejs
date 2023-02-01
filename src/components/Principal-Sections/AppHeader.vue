@@ -6,8 +6,7 @@ import Button from "../Micro-Components/Button.vue";
 import Navbar from "../Micro-Components/Navbar.vue"
 //*External File Importation
 import { store } from "../../Store-Management/store"
-import { headerMenu } from "../../Header-Menu/header-menu"
-import { buttonNavHeader } from "../../Header-Menu/header-menu"
+import { menu } from "../../Menu/menu"
 //*Export Default
 export default {
     components: { AppLogo, Navbar, Button, Card },
@@ -15,8 +14,7 @@ export default {
         return {
             name: "AppHeader",
             store: store,
-            headerMenu: headerMenu,
-            buttonNavHeader: buttonNavHeader,
+            menu: menu,
         }
     },
 }
@@ -38,9 +36,9 @@ export default {
                 </div>
                 <!-- NAV-BAR -->
                 <div class="col-9 nav-bar d-flex align-items-center justify-content-end ">
-                    <Navbar :links="headerMenu" personalizationNav="m-3 d-flex" personalizationUL="d-flex"
+                    <Navbar :links="menu" personalizationNav="m-3 d-flex" personalizationUL="d-flex"
                         personalizationA="text-white m-3"></Navbar>
-                    <Button :nameButton="buttonNavHeader" personalization="btn-type bck-pink mx-2"></Button>
+                    <Button nameButton="Get a Quote" personalization="btn-type bck-pink mx-2"></Button>
                 </div>
             </div>
             <!-- PLANET IMAGES -->
@@ -95,7 +93,6 @@ export default {
             <img src="../../assets/Img/bottom-shape.png" alt="">
         </div>
     </header>
-
 </template>
 
 
