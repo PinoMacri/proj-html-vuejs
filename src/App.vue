@@ -1,12 +1,10 @@
 <script >
-
 //*Components Importation
 import AppHeader from './components/Principal-Sections/AppHeader.vue';
 //*Export Default
 export default {
   components: { AppHeader, }
 }
-
 </script>
 
 
@@ -14,10 +12,8 @@ export default {
 
 
 <template>
-
   <!-- HEADER -->
   <app-header></app-header>
-
 </template>
 
 
