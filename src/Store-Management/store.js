@@ -88,6 +88,13 @@ export const store = reactive({
         '<i class="fa-solid fa-circle"></i>',
         '<i class="fa-solid fa-circle"></i>',
         '<i class="fa-solid fa-circle"></i>',
+    ],
+    sponsors: [
+        "sponsor1.png",
+        "sponsor2.png",
+        "sponsor3.png",
+        "sponsor4.png",
+        "sponsor5.png",
     ]
 
 })

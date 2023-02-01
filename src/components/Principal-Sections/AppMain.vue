@@ -13,7 +13,7 @@ export default {
             store: store,
             currentIndex: 0,
             index: 0,
-
+            inputText: "",
         }
     }, methods: {
         buttonClickedPrev() {
@@ -209,7 +209,52 @@ export default {
                 <Button @button-clicked="buttonClickNextOpacity" nameButton="<i class='fa-solid fa-circle-right'></i>"
                     personalization="bg-white styleArrows me-5"></Button>
             </div>
+            <!-- Section Clients -->
+            <section class="section-clients ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center information">
+                            <p class="pre-title">Why Anidio studio?</p>
+                            <h2 class="title p-1">We Love Our Clients</h2>
+                            <p class="caption productions p-3">
+                                We are trusted throughout adland and have a wealth of recommendations from start-ups to
+                                renowned global brands
+                            </p>
+                            <ul class="d-flex justify-content-between">
+                                <li v-for="sponsor in store.sponsors" :key="sponsor">
+                                    <img :src="`src/assets/img/${sponsor} `" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section Information -->
+            <section class="section-information mt-5">
+                <div class="shape">
+                    <img class="img-fluid" src="../../assets/Img/shape-top.png" alt="">
+                </div>
+                <div class="container h-100">
+                    <div class="row justify-content-between align-items-center h-100">
+                        <div
+                            class="containerImg-Text col-12 text-center d-flex flex-column align-items-center justify-content-start text-white pt-5">
+                            <p class="pre-title orange">We Create New Worlds!</p>
+                            <h2 class="p-5 mb-5">Quant Tips On Your Storytelling?</h2>
+                            <p class="caption storytelling">Join our newsletter for tips on how to elevate your brand
+                                through
+                                storytelling</p>
+                            <div>
+                                <input class="mt-5" type="text" v-model.trim="inputText" placeholder="Enter your email">
+                                <Button personalization="ml" v-text="'Submit'"></Button>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-bottom">
+                    <img class="img-fluid" src="../../assets/Img/shape-bottom.png" alt="">
+                </div>
+            </section>
         </section>
     </main>
 </template>
@@ -222,6 +267,20 @@ export default {
 //! --- SASS --- *//
 @use "../../assets/Scss/mixin" as*;
 @use "../../assets/Scss/variables" as*;
+
+.information {
+    margin-top: 100px;
+}
+
+.ml {
+    margin-left: 830px;
+    position: absolute;
+    left: 420px;
+    bottom: 94px;
+    padding: 6px 20px;
+    background-color: $brand_pink;
+
+}
 
 //! --- MAIN --- *//
 //* General-Main */
@@ -384,7 +443,26 @@ h2 {
     margin-bottom: 30px;
 }
 
+.pre-title.orange {
+    color: orangered;
+}
+
+.caption.storytelling {
+    margin-top: 165px;
+}
+
+input.mt-5 {
+    border-radius: 20px;
+    padding: 10px 0px;
+    width: 800px;
+}
+
+input::placeholder {
+    padding-left: 20px;
+}
+
 //* Section Cards */
+
 .divCards {
     height: 200px;
     width: 650px;
