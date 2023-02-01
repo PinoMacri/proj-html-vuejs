@@ -35,7 +35,7 @@ export default {
                             <p class="pre-title">
                                 Our Love For Animation
                             </p>
-                            <h2 class="title">
+                            <h2 class="title ">
                                 We're StoryTelling
                                 Experts Whith Creative Smarts
                             </h2>
@@ -155,6 +155,10 @@ h2 {
 //* Principal-Text */
 .principalText {
     height: 30%;
+
+    div.w-50 {
+        margin-left: 105px;
+    }
 }
 
 .pre-title {
