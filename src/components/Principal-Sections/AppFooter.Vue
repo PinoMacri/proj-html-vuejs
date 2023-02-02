@@ -60,7 +60,7 @@ export default {
 }
 
 i {
-    color: $brand_light_purples;
+    color: $brand_light_green;
     font-size: 40px;
     margin: 10px;
     cursor: pointer;

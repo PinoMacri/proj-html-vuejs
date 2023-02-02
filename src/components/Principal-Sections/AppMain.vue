@@ -285,10 +285,6 @@ h2 {
     background-color: $brand_light_yellow;
 }
 
-.bck-purple {
-    background-color: $brand_light_purples;
-}
-
 .bck-pink {
     background-color: $brand_pink;
 }
@@ -358,7 +354,7 @@ h2 {
 
 .pre-title {
     font-weight: bold;
-    color: $brand_light_purples;
+    color: $brand_light_green;
     font-size: 30px;
 }
 
