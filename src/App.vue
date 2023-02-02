@@ -38,9 +38,19 @@ ul {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em blue, 0 0 0.2em red;
+  }
+
 }
 
 p {
   font-size: 20px;
+}
+
+button:hover {
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em blue, 0 0 0.2em red;
+  transform: scale(1.2);
 }
 </style>

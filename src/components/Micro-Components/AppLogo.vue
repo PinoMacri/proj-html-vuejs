@@ -27,5 +27,7 @@ export default {
 
 
 <style>
-
+.brand-logo img {
+    cursor: pointer;
+}
 </style>
